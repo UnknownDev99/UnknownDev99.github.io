@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#vanta-canvas{
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #ffffff;
+    font-size: 150px;
+    font-family: Luckiest Guy;
+    text-shadow: 5px 5px #606060;
+    letter-spacing: 8px;
+}
+
+.greet {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #ffffff;
+    font-size: 50px;
+    font-family: Luckiest Guy;
+    text-shadow: 5px 5px #606060;
+    letter-spacing: 8px;
+}
+
+.form-search {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: transparent;
+    font-size: 50px;
+    font-family: Luckiest Guy;
+    letter-spacing: 8px;
+}
+
