@@ -193,11 +193,13 @@ var i = 0;
 var greeting;
 var time = new Date().getHours();
 if (time < 10) {
-  greeting = "Selamat Pagi Sayang 🥱🥰";
+  greeting = "Selamat Pagi Cintaww 🥱🥰  Jangan Lupa Sarapan ❤";
+} else if (time < 15) {
+  greeting = "Selamat Siang Sayang 😘 Semangattt ❤";
 } else if (time < 20) {
-  greeting = "Selamat Siang Sayang 😘";
+  greeting = "Selamat Sore Cintaww 😘";
 } else {
-  greeting = "Selamat Malam Sayang 😴";
+  greeting = "Selamat Malam Sayang 😴 Sleep Tight 🥰";
 }
 
 var speed = 100;
