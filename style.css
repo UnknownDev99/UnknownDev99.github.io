@@ -18,18 +18,20 @@
     font-family: Luckiest Guy;
     text-shadow: 5px 5px #606060;
     letter-spacing: 8px;
+    width: auto;
 }
 
 .greet {
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: #ffffff;
-    font-size: 30px;
+    font-size: 25px;
     font-family: Luckiest Guy;
     text-shadow: 5px 5px #606060;
     letter-spacing: 8px;
+    width: auto;
 }
 
 .form-search {
