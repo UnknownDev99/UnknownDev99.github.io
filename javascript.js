@@ -216,8 +216,60 @@ document.getElementById('search')
   .addEventListener('keyup', function(event) {
     if (event.code === 'Enter') {
       event.preventDefault();
-      document.querySelector('form').action = "http://www.google.com/search"
-      document.querySelector('form').method = "GET"
-      document.querySelector('form').submit()
+      var checkPass = document.getElementById('search').value
+      if(checkPass === '18012020'){
+        $('#myModal').modal({
+          show: true
+        })
+        createBalloons(50)
+      }
+      else{
+        document.getElementById('input-search').value = checkPass
+        // document.querySelector('form').action = "http://www.google.com/search"
+        // document.querySelector('form').method = "GET"
+        document.querySelector('form').submit()
+        modal.open();
+      }
     }
   });
+
+$('#myModal').on('show.bs.modal', function (e) {
+  $('.modal .modal-dialog').attr('class', 'modal-dialog modal-dialog-centered tada animated');
+})
+$('#myModal').on('hide.bs.modal', function (e) {
+  var balloonContainer = document.getElementById("balloon-container")
+  balloonContainer.innerHTML = ""
+})
+
+function random(num) {
+  return Math.floor(Math.random()*num)
+}
+
+function getRandomStyles() {
+  var r = random(255);
+  var g = random(255);
+  var b = random(255);
+  var mt = random(200);
+  var ml = random(50);
+  var dur = random(5)+5;
+  return `
+  background-color: rgba(${r},${g},${b},0.7);
+  backgrou
+  color: rgba(${r},${g},${b},0.7); 
+  box-shadow: inset -7px -3px 10px rgba(${r-10},${g-10},${b-10},0.7);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite;
+  z-index: 5;
+  `
+}
+
+function createBalloons(num) {
+  var balloonContainer = document.getElementById("balloon-container")
+  for (var i = num; i > 0; i--) {
+  var balloon = document.createElement("div");
+  balloon.className = "balloon";
+  balloon.style.cssText = getRandomStyles();           
+  balloonContainer.append(balloon);
+  }
+}
+

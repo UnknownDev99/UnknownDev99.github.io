@@ -14,7 +14,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: #ffffff;
-    font-size: 150px;
+    font-size: 100px;
     font-family: Luckiest Guy;
     text-shadow: 5px 5px #606060;
     letter-spacing: 8px;
@@ -26,7 +26,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: #ffffff;
-    font-size: 50px;
+    font-size: 30px;
     font-family: Luckiest Guy;
     text-shadow: 5px 5px #606060;
     letter-spacing: 8px;
@@ -41,5 +41,63 @@
     font-size: 50px;
     font-family: Luckiest Guy;
     letter-spacing: 8px;
+    z-index: 3;
 }
 
+
+.modal.fade{
+  opacity:1;
+}
+.modal.fade .modal-dialog {
+   -webkit-transform: translate(0);
+   -moz-transform: translate(0);
+   transform: translate(0);
+}
+
+#balloon-container {
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+  }
+  
+  .balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .balloon:after {
+      content: "▲";
+      text-align: center;
+      display: block;
+      position: absolute;
+      color: inherit;
+      top: 120px;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+  
+  @keyframes float {
+    from {transform: translateY(100vh);
+    opacity: 1;}
+    to {transform: translateY(-300vh);
+    opacity: 0;}
+  }
